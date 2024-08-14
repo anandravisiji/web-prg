@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Factorial</h1>
+    enter a number: <input id="num">
+    <br>
+    <button onclick="read()">Factorial</button>
+    <p id="res"></p>
+    <script>
+        function fact(num)
+        {
+            if(num==0)
+            {
+                return 1;
+            }
+            else{
+                return num*fact(num-1);
+            }
+        }
+        function read()
+        {
+            var num=document.getElementById("num").value;
+            var f=fact(num);
+            console.log("factorial of"+num+"="+f);
+        } 
+    </script>
+</body>
+</html>

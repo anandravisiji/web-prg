@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temperature Converter</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+label, input, select, button {
+    display: block;
+    margin: 10px 0;
+}
+.result {
+    margin-top: 20px;
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+    <h1>Temperature Converter</h1>
+    <label for="temperature">Enter Temperature:</label>
+    <input type="number" id="temperature" placeholder="Enter temperature value">
+
+    <label for="unit">Convert to:</label>
+
+    <select id="unit">
+        <option value="C">Fahrenheit to Celsius</option>
+        <option value="F">Celsius to Fahrenheit</option>
+        <option value="K">Kelvin to Celsius</option>
+        <option value="k">Kelvin to Fahrenheit</option>
+    </select>
+
+<button onclick="convertTemperature()">Convert</button>
+
+<div class="result" id="result"></div>
+
+<script>
+function convertTemperature() {
+// Get input values
+let tempValue = document.getElementById("temperature").value;
+let targetUnit = document.getElementById("unit").value;
+
+// Convert the temperature
+let convertedTemp;
+if (targetUnit === "C") {
+convertedTemp = (tempValue - 32) * 5 / 9;
+} else if (targetUnit === "F") {
+convertedTemp = (tempValue * 9 / 5) + 32;
+} else if (targetUnit === "K") {
+    convertedTemp = tempValue - 273.15;
+    targetUnit="C";
+}else if (targetUnit === "k") {
+    convertedTemp = ((tempValue - 273.15) * 9 / 5) + 32;
+    targetUnit="F";
+}
+
+// Display the result
+document.getElementById("result").innerHTML =
+`Converted Temperature: ${convertedTemp.toFixed(2)}°${targetUnit}`;
+}
+</script>
+
+</body>
+
+</html>
