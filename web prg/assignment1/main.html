@@ -1,15 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <title>My Title</title>
-    <script type="text/javascript">
-        document.write("hello java")
-    </script>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Anand R S</title>
+    <meta name="author" content="Anand R S">
+    <meta name="description" content="A personal page showcasing information about [Your Name].">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>heading</h1>
-    <div id="div1"><p class="p1">ptag1</p></div>
-    <div id="div2"><p class="p2">ptag2</p></div>
+    <!-- Profile Picture and Link -->
+    <header>
+        <h1>About Anand R S</h1>
+        <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" target="_blank">
+            <img src="profile.jpg" alt="Anand R S" id="profile-pic">
+        </a>
+    </header>
+
+    <!-- About Me Section -->
+    <section>
+        <h2>About Me</h2>
+        <p>Hello! My name is Anand R S. My strengths and weaknesses:</p>
+        <ul>
+            <li><strong>Strengths:</strong> Technical skills,Attention span,Honesty</li>
+            <li><strong>Weaknesses:</strong> Communication skills,Time taking</li>
+        </ul>
+    </section>
+
+    <!-- Bucket List Table -->
+    <section>
+        <h2>My Bucket List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Serial Number</th>
+                    <th>Items</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>World tour</td>
+                    <td>Not Completed</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Make a Game</td>
+                    <td>Not Completed</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>New House</td>
+                    <td>Not Completed</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>My Favorite Media</h2>
+        <div>
+            <h3>Favorite Movie</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/[VideoID]" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div>
+            <h3>Favorite Song</h3>
+            <audio controls>
+                <source src="song.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </section>
+
+    <button onclick="showAlert()">Click Me!</button>
+
+    <script>
+        function showAlert() {
+            alert('Hello, welcome to my page!');
+        }
+        const profilePic = document.getElementById('profile-pic');
+        profilePic.addEventListener('mouseover', () => {
+            document.body.style.backgroundColor = 'grey';
+        });
+
+        profilePic.addEventListener('mouseout', () => {
+            document.body.style.backgroundColor = 'white';
+        });
+
+    </script>
 </body>
 </html>
