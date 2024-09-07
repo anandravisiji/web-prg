@@ -9,25 +9,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Profile Picture and Link -->
     <header>
         <h1>About Anand R S</h1>
-        <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" target="_blank">
-            <img src="profile.jpg" alt="Anand R S" id="profile-pic">
-        </a>
+    <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" target="_blank">
+        <img src="profile.jpg" alt="Anand R S" id="profile-pic">
+    </a>
+    <h2>Anand R S</h2>
     </header>
 
-    <!-- About Me Section -->
-    <section>
-        <h2>About Me</h2>
-        <p>Hello! My name is Anand R S. My strengths and weaknesses:</p>
-        <ul>
-            <li><strong>Strengths:</strong> Technical skills,Attention span,Honesty</li>
-            <li><strong>Weaknesses:</strong> Communication skills,Time taking</li>
-        </ul>
-    </section>
+    <div class="flip-container">
+        <div class="flip-box">
+            <div class="front">
+                <div>
+                    <h2>About Me</h2>
+                    <p>Hello! My name is Anand R S. I am currently pursuing a BTech degree at MBCET Trivandrum. 
+                       My home is at Kadakkal, Kollam. In my free time, I create animations. My main hobbies are listening to music and gaming.</p>
+                </div>
+            </div>
+            
+            <div class="back">
+                <div>
+                    <h2>Strengths and Weaknesses</h2>
+                    <ul>
+                        <li><strong>Strengths:</strong> Technical skills, Attention span, Honesty</li>
+                        <li><strong>Weaknesses:</strong> Communication skills, Time management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- Bucket List Table -->
     <section>
         <h2>My Bucket List</h2>
         <table>
@@ -47,12 +58,17 @@
                 <tr>
                     <td>2</td>
                     <td>Make a Game</td>
-                    <td>Not Completed</td>
+                    <td>Progressing/Halted</td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td>New House</td>
-                    <td>Not Completed</td>
+                    <td>New Job</td>
+                    <td>Progressing</td>
+                </tr>
+                <tr></tr>
+                    <td>4</td>
+                    <td>Btech completion</td>
+                    <td>Progressing</td>
                 </tr>
             </tbody>
         </table>
@@ -62,16 +78,19 @@
         <h2>My Favorite Media</h2>
         <div>
             <h3>Favorite Movie</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/[VideoID]" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            <h5>Avengers EndGame</h5>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/eGPnjuDAWD4" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
         </div>
         <div>
             <h3>Favorite Song</h3>
+            <h5>What Are You Going to Do When You Are Not Saving the World - Man of Steel</h2>
             <audio controls>
-                <source src="song.mp3" type="audio/mp3">
+                <source src="What Are You Going to Do When You Are Not Saving the World_.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
         </div>
     </section>
+    
 
     <button onclick="showAlert()">Click Me!</button>
 

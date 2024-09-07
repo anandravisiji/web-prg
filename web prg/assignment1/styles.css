@@ -12,7 +12,12 @@ body {
     line-height: 1.6;
     padding: 20px;
 }
-
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
 header {
     text-align: center;
     margin-bottom: 20px;
@@ -24,11 +29,58 @@ header {
     border-radius: 50%;
     transition: background-color 0.3s ease;
 }
-
+p{
+    text-align: center;
+}
 h1, h2 {
     color: #2c3e50;
+    text-align: center;
+    padding: 20px;
+}
+.flip-container {
+    perspective: 1000px;
+    margin: 20px auto;
+    width: 500px;
+    height: 300px;
 }
 
+.flip-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.flip-container:hover .flip-box {
+    transform: rotateY(180deg);
+}
+
+.flip-box .front,
+.flip-box .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.flip-box .front {
+    background-color: #e0f7fa;
+}
+
+.flip-box .back {
+    transform: rotateY(180deg);
+    background-color: #ffecb3;
+}
 table {
     width: 100%;
     border-collapse: collapse;
